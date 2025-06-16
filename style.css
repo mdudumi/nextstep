@@ -1,0 +1,447 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  background-color: #1d2c2c;
+  color: #f4f4f4;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #0f1c1c;
+  min-height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; removed to allow footer to auto-position */
+}
+
+.logo {
+  color: #f4f4f4;
+  font-size: 2rem;        /* increased from 1.4rem */
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-logo {
+  width: 150px;           /* increased from 90px */
+  margin-top: 12px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;               /* reduced from 10px */
+}
+
+.side-nav a {
+  display: block;
+  padding: 8px 12px;      /* tightened from 12px 16px */
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #f0b233;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.side-nav a:hover {
+  background-color: rgba(240, 178, 51, 0.1);
+  border-color: #f0b233;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.sidebar-footer {
+  margin-top: auto;       /* pushes footer to bottom */
+  color: #888;
+  font-size: 0.7rem;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  white-space: nowrap;    /* prevent line breaks */
+  overflow-x: auto;       /* allow horizontal scroll if too long */
+}
+
+/* Main content */
+.content {
+  margin-left: 240px;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #f0b233;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.hero-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.hero-overlay h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  color: #f0b233;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #f4f4f4;
+}
+
+.hero-button {
+  padding: 12px 24px;
+  background-color: #f0b233;
+  color: #1d2c2c;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #d99a0c;
+  color: #fff;
+}
+
+/* Artikuj & Filtrim */
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background: transparent;
+  color: #f0b233;
+  border: 2px solid #f0b233;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #f0b233;
+  color: #1d2c2c;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #243333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: block;
+  text-decoration: none;
+  border: 1px solid #333;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  color: #f0b233;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Galeria Avancuar */
+.gallery-section {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.main-image-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-image-box img.fade {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.main-image-box img.fade-out {
+  opacity: 0;
+}
+
+.thumbnail-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.thumb:hover {
+  opacity: 1;
+}
+
+.thumb.active {
+  border-color: #f0b233;
+  opacity: 1;
+}
+
+/* Lazy loading */
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+img:not(.lazy) {
+  opacity: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1d2c2c;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f0b233;
+  border-radius: 4px;
+}
+
+/* Active nav link on scroll */
+.side-nav a.active-nav {
+  background-color: #f0b233;
+  color: #1d2c2c;
+  border-color: #f0b233;
+}
+
+/* Hapura mes kartave dhe butonave të pagination-it */
+[id$="-pagination"] {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Bëj audio-n të shfaqet në një rresht të ri */
+.card-content audio {
+  display: block;
+  margin-top: 10px; /* pak hapësirë mbi link */
+}
+
+/* Stilizo butonin “Lexo më shumë…” */
+.card-content .read-more {
+  display: block;          /* vendoset poshtë audio */
+  margin-top: 12px;        /* hapësirë nga audio */
+  color: #f0b233;          /* ngjyra që përdor website-i */
+  text-decoration: none;   /* heq të kuqen/ndarjen e vargut */
+  font-weight: bold;
+}
+
+/* Hover efekt (opsional) */
+.card-content .read-more:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Stili për cover art në kartë */
+.card-content .track-cover {
+  display: block;
+  width: 100%;         /* zgjero në gjerësinë e kartës */
+  height: auto;        /* ruan raportin e aspektit */
+  border-radius: 6px;  /* cepa të rrumbullakosur */
+  margin-bottom: 12px; /* hapësirë poshtë imazhit */
+  object-fit: contain;   /* mbushje e hijshme */
+}
+
+.track-cover {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* --- Forum Styles --- */
+
+/* Përmbledhje View */
+.forum-view {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #243333;
+  border-radius: 8px;
+}
+
+/* Titujt */
+.forum-view h2,
+.forum-view h3 {
+  color: #f0b233;
+  margin-bottom: 12px;
+}
+
+/* Forma e krijimit të temës / mesazhit */
+.forum-form input,
+.forum-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: #1d2a2a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #f4f4f4;
+  resize: vertical;
+}
+
+/* Butonat Prev/Next të forum-pagination */
+.filter-buttons.forum-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.filter-buttons.forum-pagination .filter-btn {
+  background-color: #f0b233;
+  color: #1d2c2c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-buttons.forum-pagination .filter-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Lista e temave si karta */
+#topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#topics li {
+  margin-bottom: 8px;
+}
+#topics li a {
+  display: block;
+  padding: 12px;
+  background: #1d2a2a;
+  color: #f4f4f4;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+#topics li a:hover {
+  background: #f0b233;
+  color: #1d2c2c;
+  transform: scale(1.02);
+}
+
+/* Lista e mesazheve */
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.message-list li {
+  background: #1d2a2a;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  color: #f4f4f4;
+  font-size: 0.95rem;
+}
+
+/* Butoni emoji */
+#emoji-button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  margin-right: 8px;
+  cursor: pointer;
+}
