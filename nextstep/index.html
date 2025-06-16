@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEXT STEP</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+  <div class="logo">
+    <img src="images/logo/logo.png" alt="Next Step Logo" class="sidebar-logo" />
+  </div>
+    <nav class="side-nav">
+      <a href="#artikujt">Artikuj</a>
+      <a href="#krijime">Krijime</a>
+      <a href="#keshilla">Këshilla</a>
+      <a href="#profil">Profil</a>
+      <a href="#projekte">Galeria</a>
+      <a href="#deshmi">Dëshmi</a>
+      <a href="#argetim">Argëtim</a>
+      <!-- Blog menu now links to forum.html -->
+      <a href="forum.html" class="filter-btn">Blog</a>
+      <a href="#kuriozitete">Kuriozitete</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="sidebar-footer">
+      © 2025 Next Step. All rights reserved.
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- HERO CAROUSEL -->
+    <section class="hero-carousel">
+      <div class="hero-slide">
+        <img id="carouselImage" class="lazy" data-src="images/u1.jpg" alt="Slide" />
+        <div class="hero-overlay">
+          <h1>Transformo të ardhmen me Next Step</h1>
+          <p>Komunitet që fuqizon rininë përmes besimit dhe veprimit.</p>
+          <a href="#kontakt" class="hero-button">Bashkohu me ne</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artikuj me filtrim -->
+    <section id="artikujt">
+      <h2>Artikuj</h2>
+
+  <div id="artikujt-filters" class="filter-buttons">
+    <!-- 2) thërrasim filterSection me dy parametra -->
+    <button onclick="filterSection('artikujt','all')"    class="filter-btn active">Të gjitha</button>
+    <button onclick="filterSection('artikujt','mesime')" class="filter-btn">Mësime Biblike</button>
+    <button onclick="filterSection('artikujt','inkurajim')" class="filter-btn">Inkurajim</button>
+    <button onclick="filterSection('artikujt','histori')"   class="filter-btn">Histori Personale</button>
+  </div>
+
+      <div id="artikujt-cards" class="card-grid">
+        <a href="pages/artikuj/artikull1.html" class="card" data-category="mesime">
+          <img data-src="images/artikuj/mësime/1.jpg" alt="Artikulli 1" class="lazy" />
+          <div class="card-content">
+            <h3>I ZHYTUR NË FALJE!</h3>
+            <p>Nëse nuk e ke bërë, atëherë ndalo së mbajturi këtë peshë të madhe, fal, sepse falja është arsyeja pse ne jemi këtu ku jemi… 		Kur të lexosh Jozefin herë tjetër, kujto këtë mesazh dhe mos humb shumë kohë që nuk kthehet pas, por shko dhe fal…</p>
+          </div>
+        </a>
+
+        <a href="pages/artikuj/artikull2.html" class="card" data-category="inkurajim">
+          <img data-src="images/artikuj/inkurajim/1.jpg" alt="Artikulli 2" class="lazy" />
+          <div class="card-content">
+            <h3>MELODIA E ZEMRËS SIME!</h3>
+            <p>Unë e dëgjova atë nëpër tinguj… Nuk do ta harroj kurrë atë ditë, atë moment, kur Perëndia i Gjithësisë i foli zemrës 			sime...</p>
+          </div>
+        </a>
+
+        <a href="pages/artikuj/artikull3.html" class="card" data-category="mesime">
+          <img data-src="images/artikuj/mësime/2.jpg" alt="Artikulli 3" class="lazy" />
+          <div class="card-content">
+            <h3>PËRSE DUHET TË VINTE JEZUSI?</h3>
+            <p>Një djalë, një Shpëtimtar, që do të vijë dhe do të shpëtojë botën. Ai do të jetë i pafajshëm, i drejtë, dhe do të udhëheqë 		me një dashuri që do të ndryshojë gjithçka. Nëpërmjet Tij, Perëndia do të sjellë një shpëtim që asnjë njeri nuk mund ta 		kuptojë plotësisht, por që do ta shijojnë ata që kanë besim...</p>
+          </div>
+        </a>
+
+        <a href="pages/artikuj/artikull4.html" class="card" data-category="histori">
+          <img data-src="images/artikuj/histori/1.jpg" alt="Artikulli 4" class="lazy" />
+          <div class="card-content">
+            <h3>PËRBALLË TË PANJOHURËS!</h3>
+            <p>Të jetosh jashtë vendit tënd, larg familjes dhe kulturës që të ka formuar, është një përvojë e pasur, por shpesh e mbushur 		me sfida. Kjo është historia e një vajze shqiptare, e cila, duke ndjekur ëndrrën për të studiuar infermieri të 				përgjithshme…</p>
+          </div>
+        </a>
+
+        <a href="pages/artikuj/artikull5.html" class="card" data-category="histori">
+          <img data-src="images/artikuj/histori/2.jpg" alt="Artikulli 5" class="lazy" />
+          <div class="card-content">
+            <h3>ZINXHIRËT E BARRAVE!</h3>
+            <p>E frikshme, ndryshonte çdo ditë. Një ditë vinte në orët e vona ndërsa isha vetëm; një ditë tjetër vinte thjesht nga një 			scroll në rrjetet sociale; një ditë tjetër nga një film, një libër, një foto, ose madje nga një njeri që ti e shikon dhe, 		në vend që ta shohësh siç është, e sheh...</p>
+          </div>
+        </a>
+
+        <a href="pages/artikuj/artikull6.html" class="card" data-category="inkurajim">
+          <img data-src="images/artikuj/inkurajim/3.jpg" alt="Artikulli 6" class="lazy" />
+          <div class="card-content">
+            <h3>JAVË E RE, MUAJ I RI, VIT I RI!</h3>
+            <p>Mos u brengosni, pra, për të nesërmen, sepse e nesërmja do të kujdeset vetë për vete. Secilës ditë i mjafton pikëllimi i 		vet...</p>
+          </div>
+        </a>
+
+        <a href="pages/artikuj/artikull7.html" class="card" data-category="inkurajim">
+          <img data-src="images/artikuj/inkurajim/2.jpg" alt="Artikulli 7" class="lazy" />
+          <div class="card-content">
+            <h3>ZOTI PO PËRGATIT DIÇKA MË TË MIRË!</h3>
+            <p>Ndiqni vullnetin e Zotit. Bindjuni fjalëve të Tij edhe nëse ka raste kur nuk mund t'i kuptoni plotësisht. Respektoni 			sovranitetin e Tij dhe pranoni fuqinë e Tij. Vendos Mbretërinë e Tij të parën dhe gjithçka tjetër do të pasojë...</p>
+          </div>
+        </a>
+
+      </div>
+<div id="artikujt-pagination" class="filter-buttons">
+    <button id="artikujt-prev" class="filter-btn"
+            onclick="prevPage('artikujt')" disabled>
+      Të mëparshme
+    </button>
+    <button id="artikujt-next" class="filter-btn"
+            onclick="nextPage('artikujt')">
+      Tjetër
+    </button>
+  </div>
+    </section>
+
+    <!-- Placeholder seksione -->
+<section id="krijime">
+  <h2>Krijime</h2>
+
+  <!-- FILTER BUTTONS -->
+  <div id="krijime-filters" class="filter-buttons">
+    <button onclick="filterSection('krijime','all')"      class="filter-btn active">Të gjitha</button>
+    <button onclick="filterSection('krijime','adhurim')"  class="filter-btn">Krijim Muzikor</button>
+    <button onclick="filterSection('krijime','shkrim')"   class="filter-btn">Krijim Poetik</button>
+    <button onclick="filterSection('krijime','pikture')"  class="filter-btn">Krijim Grafik</button>
+    <button onclick="filterSection('krijime','handmade')" class="filter-btn">Krijim Handmade</button>
+  </div>
+
+  <!-- ALL CARDS IN ONE GRID, REORDERED -->
+  <div id="krijime-cards" class="card-grid">
+    <!-- Krijim Poetik -->
+    <div class="card" data-category="shkrim">
+      <img src="images/krijime/shkrim/1.jpg" alt="Poem 1" class="track-cover" />
+      <div class="card-content">
+        <h3>BRISILDA GANXO – KUR RRJEDH NJË POEZI</h3>
+        <a href="pages/krijime/artikull4.html" class="read-more">
+          Lexo më shumë.
+        </a>
+      </div>
+    </div>
+
+    <!-- Handmade -->
+    <div class="card" data-category="handmade">
+      <img src="images/krijime/handmade/1.jpg" alt="Handmade 1" class="track-cover" />
+      <div class="card-content">
+        <h3>BERTINA MYZEQARI – KARTOLINA DIY</h3>
+        <a href="pages/krijime/artikull5.html" class="read-more">
+          Lexo më shumë.
+        </a>
+      </div>
+    </div>
+
+    <!-- Adhurim (Muzikë) -->
+    <div class="card" data-category="adhurim">
+      <img 
+        src="images/krijime/adhurim/1.jpg" 
+        alt="Martin Dudumi – Dita Po Vjen (Cover)" 
+        class="track-cover" 
+      />
+      <div class="card-content">
+        <h3>MARTIN DUDUMI – DITA PO VJEN</h3>
+        <audio controls preload="none">
+          <source src="images/krijime/adhurim/1.mp3" type="audio/mpeg">
+          Browseri juaj nuk e mbështet audio.
+        </audio>
+        <a href="pages/krijime/artikull2.html" class="read-more">
+          Teksti dhe Akordet
+        </a>
+      </div>
+    </div>
+
+    <!-- Pikturë 1 -->
+    <a href="pages/krijime/artikull1.html" class="card" data-category="pikture">
+      <img data-src="images/krijime/pikture/1.jpg" alt="Pikturë 1" class="lazy" />
+      <div class="card-content">
+        <h3>XHULI TOSKA – QENUSHI</h3>
+      </div>
+    </a>
+
+    <!-- Pikturë 2 -->
+    <a href="pages/krijime/artikull2.html" class="card" data-category="pikture">
+      <img data-src="images/krijime/pikture/2.jpg" alt="Pikturë 2" class="lazy" />
+      <div class="card-content">
+        <h3>XHULI TOSKA – PEIZAZH</h3>
+      </div>
+    </a>
+
+    <!-- Pikturë 3 -->
+    <a href="pages/krijime/artikull3.html" class="card" data-category="pikture">
+      <img data-src="images/krijime/pikture/3.jpg" alt="Pikturë 3" class="lazy" />
+      <div class="card-content">
+        <h3>XHULI TOSKA – PORTRET</h3>
+      </div>
+    </a>
+  </div>
+
+  <!-- PAGINATION -->
+  <div id="krijime-pagination" class="filter-buttons">
+    <button id="krijime-prev" class="filter-btn"
+            onclick="prevPage('krijime')" disabled>
+      Të mëparshme
+    </button>
+    <button id="krijime-next" class="filter-btn"
+            onclick="nextPage('krijime')">
+      Tjetër
+    </button>
+  </div>
+</section>
+
+
+    <section id="keshilla"><h2>Këshilla</h2></section>
+    <section id="profil"><h2>Profili</h2></section>
+    <section id="projekte"><h2>Galeria</h2></section>
+    <section id="deshmi"><h2>Dëshmi</h2></section>
+    <section id="argetim"><h2>Argëtim</h2></section>
+    <section id="kuriozitete"><h2>Kuriozitete</h2></section>
+    <section id="kontakt"><h2>Kontakt</h2></section>
+
+    <!-- Galeria Avancuar -->
+    <section id="galeria-avancuar" class="gallery-section">
+      <h2>Galeria e Avancuar</h2>
+
+      <div class="main-image-box">
+        <img id="mainImage" src="images/galeria/1.jpg" alt="Imazh Kryesor" class="fade" />
+      </div>
+
+      <div class="thumbnail-row">
+        <img src="images/galeria/1.jpg" alt="1" class="thumb active" onclick="changeMainImage(this)">
+        <img src="images/galeria/2.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/3.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/4.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/5.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/6.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/7.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/8.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/9.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/10.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/11.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/12.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/13.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/14.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/15.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/16.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/17.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/18.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/19.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/20.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/21.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/22.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/23.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/24.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/25.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/26.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/27.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/28.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">	
+	<img src="images/galeria/29.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+        <img src="images/galeria/30.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/31.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/32.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/33.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/34.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/35.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/36.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/37.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/38.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/39.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/40.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/41.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/42.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/43.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/44.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/45.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/46.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/47.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/48.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/49.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/50.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/51.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/52.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/53.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+	<img src="images/galeria/54.jpg" alt="2" class="thumb" onclick="changeMainImage(this)">
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
