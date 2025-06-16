@@ -445,3 +445,99 @@ img:not(.lazy) {
   margin-right: 8px;
   cursor: pointer;
 }
+
+/* 1) Base resets for fluid images/text */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* 2) Mobile hamburger & sidebar collapse */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 2rem;
+  height: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* 3) At small widths, hide sidebar & show hamburger */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0; left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 900;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  /* push main content left when sidebar open */
+  .content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+  .sidebar.open + .content {
+    margin-left: 250px;
+  }
+}
+
+/* 4) Simplify hero & typography on mobile */
+@media (max-width: 576px) {
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+  .hero-overlay p {
+    font-size: 0.9rem;
+  }
+  .hero-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* 5) Pagination & filter buttons full width */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.filter-buttons .filter-btn {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* 6) Gallery thumbnails scrollable row */
+.thumbnail-row {
+  display: flex;
+  overflow-x: auto;
+  gap: .5rem;
+}
+.thumbnail-row .thumb {
+  flex: 0 0 auto;
+  width: 60px;
+  cursor: pointer;
+}
