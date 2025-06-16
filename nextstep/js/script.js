@@ -194,3 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(rotateCarousel, 4000);
   initScrollSpy();
 });
+
+// grab the elements
+const hamburger = document.querySelector('.hamburger');
+const sidebar   = document.querySelector('.sidebar');
+
+hamburger.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+});
